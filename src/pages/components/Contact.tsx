@@ -8,11 +8,6 @@ const Contact: React.FC = () => {
         email: '',
         message: ''
     });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState<{
-        success?: boolean;
-        message?: string;
-    }>({});
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -22,50 +17,6 @@ const Contact: React.FC = () => {
         }));
     };
 
-    // 방법 1: EmailJS 사용 (추천)
-    const handleSubmit = async (e: FormEvent) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-
-        try {
-            // EmailJS 사용 예시 (실제로는 emailjs 라이브러리 설치 필요)
-            // import emailjs from 'emailjs-com';
-            // const result = await emailjs.send(
-            //     'YOUR_SERVICE_ID', // EmailJS에서 생성한 서비스 ID
-            //     'YOUR_TEMPLATE_ID', // EmailJS에서 생성한 템플릿 ID
-            //     {
-            //         name: formData.name,
-            //         email: formData.email,
-            //         message: formData.message,
-            //         to_email: '0114chan@gmail.com'
-            //     },
-            //     'YOUR_USER_ID' // EmailJS 사용자 ID
-            // );
-
-            // 실제 API 연동 전 성공 시뮬레이션
-            await new Promise(resolve => setTimeout(resolve, 1000));
-
-            setSubmitStatus({
-                success: true,
-                message: '메시지가 성공적으로 전송되었습니다!'
-            });
-
-            // 폼 초기화
-            setFormData({
-                name: '',
-                email: '',
-                message: ''
-            });
-
-        } catch (error) {
-            setSubmitStatus({
-                success: false,
-                message: '메시지 전송에 실패했습니다. 다시 시도해주세요.'
-            });
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
 
     // 방법 2: 일반 mailto 링크 사용
     const handleMailtoSubmit = (e: FormEvent) => {
