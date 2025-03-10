@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from '../../styles/AboutMe.module.css';
-import {useRouter} from "next/router";
 
 interface Education {
     institution: string;
