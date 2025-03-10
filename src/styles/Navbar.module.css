@@ -1,0 +1,98 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3a86ff;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navLinks li {
+    margin-left: 2rem;
+}
+
+.navLinks a {
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.navLinks a:hover,
+.navLinks a.active {
+    color: #3a86ff;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.darkModeToggle {
+    background: none;
+    border: 2px solid #3a86ff;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    color: #3a86ff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.darkModeToggle:hover {
+    background-color: #3a86ff;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navLinks {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: inherit;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    .open .navLinks {
+        display: flex;
+    }
+
+    .navLinks li {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}

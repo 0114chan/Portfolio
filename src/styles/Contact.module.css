@@ -1,0 +1,98 @@
+.contactSection {
+    padding: 5rem 2rem;
+    min-height: 100vh;
+}
+
+.sectionTitle {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sectionTitle h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.underline {
+    width: 6rem;
+    height: 0.25rem;
+    background: linear-gradient(to right, #3a86ff, #8338ec);
+    margin: 0 auto;
+}
+
+.contactContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contactText p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contactLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.contactLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #3a86ff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.contactLink:hover {
+    color: #8338ec;
+}
+
+.contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.formGroup textarea {
+    resize: vertical;
+}
+
+.submitBtn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3a86ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+    background-color: #8338ec;
+}

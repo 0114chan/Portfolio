@@ -1,0 +1,70 @@
+.skillsSection {
+    padding: 5rem 2rem;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.sectionTitle {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sectionTitle h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.underline {
+    width: 6rem;
+    height: 0.25rem;
+    background: linear-gradient(to right, #3a86ff, #8338ec);
+    margin: 0 auto;
+}
+
+.skillsCategories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skillsCategory h3 {
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.skillsCategory h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #3a86ff, #8338ec);
+}
+
+.skillItem {
+    margin-bottom: 1.5rem;
+}
+
+.skillName {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.skillBarContainer {
+    width: 100%;
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skillBar {
+    height: 100%;
+    background: linear-gradient(to right, #3a86ff, #8338ec);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
