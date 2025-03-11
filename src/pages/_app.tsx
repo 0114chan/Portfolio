@@ -36,14 +36,19 @@ function MyApp({ Component, pageProps }: AppProps) {
     document.body.classList.toggle('dark-mode', !isDarkMode);
   };
 
+  // HomePage일 경우 Navbar를 제외
+  const isHomePage = Component.name === 'HomePage'; // 컴포넌트 이름으로 확인
+
   return (
       <div className={isDarkMode ? 'dark-mode' : ''}>
-        <Navbar
-            activeSection={activeSection}
-            setActiveSection={setActiveSection}
-            isDarkMode={isDarkMode}
-            toggleDarkMode={toggleDarkMode}
-        />
+        {!isHomePage && (
+            <Navbar
+                activeSection={activeSection}
+                setActiveSection={setActiveSection}
+                isDarkMode={isDarkMode}
+                toggleDarkMode={toggleDarkMode}
+            />
+        )}
         <Component {...pageProps} />
       </div>
   );
