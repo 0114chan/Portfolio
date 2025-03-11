@@ -152,6 +152,7 @@
 .resumeBtn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     padding: 1rem 2.5rem;
     background: linear-gradient(135deg, #10b981, #059669);
     color: white;

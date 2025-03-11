@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../../styles/AboutMe.module.css';
+import { FiDownload } from 'react-icons/fi';
 
 interface Education {
     institution: string;
@@ -70,6 +71,7 @@ const AboutMe: React.FC = () => {
                         ))}
                     </div>
                     <a href="/parkchanil1.pdf" className={styles.resumeBtn} target="_blank" rel="noopener noreferrer">
+                        <FiDownload className={styles.resumeIcon} />
                         이력서 다운로드
                     </a>
                 </div>
