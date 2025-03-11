@@ -5,7 +5,6 @@ import Navbar from './components/Navbar';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [activeSection, setActiveSection] = useState<string>('home');
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,22 +30,17 @@ function MyApp({ Component, pageProps }: AppProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode((prev) => !prev);
-    document.body.classList.toggle('dark-mode', !isDarkMode);
-  };
 
   // HomePage일 경우 Navbar를 제외
   const isHomePage = Component.name === 'HomePage'; // 컴포넌트 이름으로 확인
 
   return (
-      <div className={isDarkMode ? 'dark-mode' : ''}>
+      <div>
         {!isHomePage && (
             <Navbar
                 activeSection={activeSection}
                 setActiveSection={setActiveSection}
-                isDarkMode={isDarkMode}
-                toggleDarkMode={toggleDarkMode}
+
             />
         )}
         <Component {...pageProps} />
