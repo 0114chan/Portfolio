@@ -4,11 +4,10 @@ import styles from '../../styles/Navbar.module.css';
 interface NavbarProps {
     activeSection: string;
     setActiveSection: (section: string) => void;
-    isDarkMode: boolean;
-    toggleDarkMode: () => void;
+
 }
 
-const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection, isDarkMode, toggleDarkMode }) => {
+const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleNavClick = (section: string) => {
