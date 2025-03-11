@@ -50,11 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection, isDark
                         Contact
                     </a>
                 </li>
-                <li>
-                    <button onClick={toggleDarkMode} className={styles.darkModeToggle}>
-                        {isDarkMode ? '라이트 모드' : '다크 모드'}
-                    </button>
-                </li>
+
             </ul>
         </nav>
     );

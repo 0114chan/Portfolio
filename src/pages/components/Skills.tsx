@@ -17,7 +17,7 @@ const skills: Skill[] = [
     { name: "TypeScript", level: 3.5, category: "frontend" },
     { name: "Redux", level: 1, category: "frontend" },
     { name: "Tailwind CSS", level: 3, category: "frontend" },
-    { name: "Sass", level: 2, category: "frontend" },
+    { name: "Sass", level: 1, category: "frontend" },
 
     // Backend Skills (프론트엔드 개발자에게 유용한 수준)
     { name: "Node.js", level: 2, category: "backend" },
